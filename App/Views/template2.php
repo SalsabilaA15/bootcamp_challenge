@@ -19,8 +19,14 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
+				<li class="nav-item ">
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo BASE ?>/region">Region <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo BASE ?>/person">Person <span class="sr-only">(current)</span></a>
 				</li>
 			</ul>
 			<span class="navbar-text">
