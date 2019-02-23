@@ -14,5 +14,9 @@ class regionController extends Controller {
 		$result=$this->Region->index();
 		$this->loadTemplate('admin/region',array('result' => $result));
 	}
+	public function delete($id){
+		$result=$this->Region->delete($id);
+		
+	}
 
 }

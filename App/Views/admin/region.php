@@ -8,7 +8,12 @@
 	</form>
 	<table class="table">
 			<thead class="thead-dark">
-				<tr><td>No</td><td>Name</td><td>Created At</td></tr>
+				<tr>
+					<td>No</td>
+					<td>Name</td>
+					<td>Created At</td>
+					<td>Action</td>
+				</tr>
 			
 			</thead>
 			<?php $i = 1; ?>
@@ -17,8 +22,8 @@
 					<th scope="row"><?php echo $i ++; ?></th>
 					<td><?php echo $r['name'] ?></td>
 					<td><?php echo $r['created_at'] ?></td>
+					<td><a href="<?php echo BASE ?>/region/delete/<?php echo $r['id'] ?>">Hapus</a>|</td>
 				</tr>
-
 			<?php } ?>
 		
 	</table>
