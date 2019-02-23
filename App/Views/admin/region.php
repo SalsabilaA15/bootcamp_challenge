@@ -1,6 +1,6 @@
 <div class="container">
 	<h1>Region</h1>
-	<form>
+	<form method="post" action="<?php echo BASE ?>/region/add">
 		<div class="input-group">
 			<input type="form-control" name="region" placeholder="tambah region">
 			<button class="btn btn-primary" type="submit">Submit</button>

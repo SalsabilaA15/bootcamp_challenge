@@ -11,7 +11,15 @@ class personController extends Controller {
 	}
 	public function index(){
 		$result=$this->Person->index();
-		$this->loadTemplate('admin/person',array('result' => $result));
+		$result2=$this->Person->region();
+		$this->loadTemplate('admin/person',array('result' => $result,'result2' => $result2));
+	}
+	public function add(){
+		$region=$_POST['region'];
+		$name=$_POST['name'];
+		$address=$_POST['address'];
+		$income=$_POST['income'];
+		$result=$this->Person->add($region,$name,$address,$income);
 	}
 
 	

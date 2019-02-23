@@ -15,7 +15,13 @@ class regionController extends Controller {
 		$this->loadTemplate('admin/region',array('result' => $result));
 	}
 	public function delete($id){
+
 		$result=$this->Region->delete($id);
+		
+	}
+	public function add(){
+		$region=$_POST['region'];
+		$result=$this->Region->add($region);
 		
 	}
 

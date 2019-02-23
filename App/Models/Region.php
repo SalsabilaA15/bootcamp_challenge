@@ -20,9 +20,11 @@ class Region extends Model {
 		header('Location: ' .BASE. '/region');
 	}
 	public function add($region){
-		$sql ="INSERT INTO regions (name,user_id) VALUES ('$region')";
+	
+		$id=$_SESSION['login']['id'];
+		$sql ="INSERT INTO regions (name,created_by) VALUES ('$region','$id')";
 		$result = $this->db->query($sql);
-		header('Location: ' .BASE. 'index');
+		header('Location: ' .BASE. '/region');
 	}
 
 }
