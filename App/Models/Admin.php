@@ -36,6 +36,15 @@ class Admin extends Model {
 
 		return $result;
 	}
+	public function search($region){
+		$sql = "SELECT * FROM person where region_id=$region ";
+
+		$result = $this->db->query($sql);
+
+		return $result;
+	
+		header('Location: ' .BASE. '/index/admin');
+	}
 
 
 }

@@ -18,8 +18,8 @@ class Person extends Model {
 		$id=$_SESSION['login']['id'];
 		$sql ="INSERT INTO person (name,created_by,region_id,address,income) VALUES ('$name','$id','$region','$address','$income')";
 		$result = $this->db->query($sql);
-		var_dump($region,$name,$address,$income);	
-		// header('Location: ' .BASE. '/person');
+
+		header('Location: ' .BASE. '/person');
 	}
 	public function region(){
 		$sql = "SELECT * FROM regions";

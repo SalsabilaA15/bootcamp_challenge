@@ -25,6 +25,7 @@ class personController extends Controller {
 		$result=$this->Person->delete($id);
 	}
 
+
 	
 
 }

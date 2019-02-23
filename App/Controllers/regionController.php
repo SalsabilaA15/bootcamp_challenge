@@ -21,7 +21,7 @@ class regionController extends Controller {
 	}
 	public function add(){
 		$region=$_POST['region'];
-		$result=$this->Region->add($region);
+		$result=$this->Region->search($region);
 		
 	}
 

@@ -11,7 +11,7 @@ class indexController extends Controller {
 	}
 
 	public function index(){
-		
+
 		$this->loadTemplate('login');
 	}
 	public function admin(){
@@ -33,6 +33,12 @@ class indexController extends Controller {
 		$email=$_POST['email'];
 		$password=$_POST['password'];
 		$result=$this->Admin->login($email,$password);
+	}
+	public function search(){
+		$region=$_POST['region'];
+			$result2=$this->Admin->region();
+		$result=$this->Admin->search($region);
+		$this->loadTemplate('admin/index',array('result' => $result,'result2' => $result2));
 	}
 
 
