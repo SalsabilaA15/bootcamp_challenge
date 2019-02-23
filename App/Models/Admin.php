@@ -21,5 +21,21 @@ class Admin extends Model {
 		}
 
 	}
+	public function all(){
+		$sql = "SELECT * FROM person";
+
+		$result = $this->db->query($sql);
+
+		return $result;
+	}
+
+	public function region(){
+		$sql = "SELECT * FROM regions";
+
+		$result = $this->db->query($sql);
+
+		return $result;
+	}
+
 
 }

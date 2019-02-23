@@ -28,5 +28,10 @@ class Person extends Model {
 
 		return $result;
 	}
+	public function delete($id){
+		$sql = "DELETE FROM person where id=$id"; 
+		$result = $this->db->query($sql);
+		header('Location: ' .BASE. '/person');
+	}
 
 }

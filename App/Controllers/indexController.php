@@ -11,6 +11,7 @@ class indexController extends Controller {
 	}
 
 	public function index(){
+		
 		$this->loadTemplate('login');
 	}
 	public function admin(){
@@ -18,18 +19,21 @@ class indexController extends Controller {
 			header('location:../');
 		}
 		else{
-			$this->loadTemplate('admin/index');
+			$result=$this->Admin->all();
+			$result2=$this->Admin->region();
+			$this->loadTemplate('admin/index',array('result' => $result,'result2' => $result2));
 		}
 	}
 	public function logout(){
 		session_destroy();
 		header('location:index');
 	}
-	
+
 	public function login(){
 		$email=$_POST['email'];
 		$password=$_POST['password'];
 		$result=$this->Admin->login($email,$password);
 	}
+
 
 }

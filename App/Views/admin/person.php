@@ -32,6 +32,7 @@
 				<th scope="col">Address</th>
 				<th scope="col">Income</th>
 				<th scope="col">Created_At</th>
+				<th scope="col">Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -44,6 +45,7 @@
 					<td><?php echo $r['address'] ?></td>
 					<td><?php echo $r['income'] ?></td>
 					<td><?php echo $r['created_at'] ?></td>
+					<td><a href="<?php echo BASE ?>/person/delete/<?php echo $r['id'] ?>">Delete</a></td>
 					
 				</tr>
 

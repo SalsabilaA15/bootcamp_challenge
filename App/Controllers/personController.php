@@ -21,6 +21,9 @@ class personController extends Controller {
 		$income=$_POST['income'];
 		$result=$this->Person->add($region,$name,$address,$income);
 	}
+	public function delete($id){
+		$result=$this->Person->delete($id);
+	}
 
 	
 
